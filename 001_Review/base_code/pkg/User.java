@@ -50,7 +50,7 @@ public class User {
 	public boolean setPassword(String oldPass, String newPass){
 		//i like to think of this as the back-end of the setPassword method
 		//the one in BBoard interacts with the User
-		//this one compares and makes sure that the old password is right and changes 
+		//this one makes sure that the old password is right and changes the password on the code side
 		if(username == null)
 		{
 			System.out.println("Default users are not allowed to change passwords.");

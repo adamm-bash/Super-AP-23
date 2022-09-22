@@ -36,23 +36,29 @@ public class Message {
 	// Note: Each indentation increment represents 2 spaces. e.g. if indentation ==  1, the reply should be indented 2 spaces, 
 	// if it's 2, indent by 4 spaces, etc. 
 	public void print(int indentation){
+		//this if statement is not totally necessary but helps with making sure
+		//that the spacing between displayed messages is appropriate and easy to look at
 		if(isReply())
 		{
 			System.out.println();
 		}
+		//this loop sets the indentation of the subject line
 		for(int i = 0; i < indentation; i++)
 		{
 			System.out.print("  ");
 		}
+		//prints the subject line
 		System.out.print("Message #" + id + ": ");
-		
 		System.out.println("\"" + subject + "\"");
+		//this loop sets the indentation of the body line
 		for(int i = 0; i < indentation; i++)
 		{
 			System.out.print("  ");
 		}
+		//prints the body line
 		System.out.print("From " + author + ": \"" + body + "\"\n");
 
+		//recursively calls the print method on all of the messages' replies
 		if(replies != null)
 		{
 			for(int i = 0; i < replies.size(); i++)

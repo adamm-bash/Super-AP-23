@@ -10,6 +10,7 @@ public class Topic extends Message {
 
 	// Parameterized constructor
 	public Topic(String auth, String subj, String bod, int i) {
+		//leeching off of Message.java's parameterized constructor like usual
 		super(auth, subj, bod, i);
 	}
 
